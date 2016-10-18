@@ -1,20 +1,24 @@
 <template>
   <div id="app">
+    <hhl-menu></hhl-menu>
     <img src="./assets/logo.png">
-    <hello></hello>
+    <router-view></router-view>
+    <hhl-footer></hhl-footer>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+  import Menu from './components/Menu'
+  import Footer from './components/Footer'
 
-export default {
-  name: 'app',
-  components: {
-    Hello
+  export default {
+    components: {
+      'hhl-menu': Menu,
+      'hhl-footer': Footer
+    }
   }
-}
 </script>
+
 
 <style>
 #app {
